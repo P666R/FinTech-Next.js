@@ -10,10 +10,12 @@ function StatisticsTwo() {
   const count2 = useMotionValue(0);
   const count3 = useMotionValue(0);
 
+  const formatWholeNumber = (value) => value.toFixed(0).padStart(2, '0');
+
   // Format the counts for display
-  const roundedCount1 = useTransform(count1, (value) => value.toFixed(0));
-  const roundedCount2 = useTransform(count2, (value) => value.toFixed(0));
-  const roundedCount3 = useTransform(count3, (value) => value.toFixed(0));
+  const roundedCount1 = useTransform(count1, formatWholeNumber);
+  const roundedCount2 = useTransform(count2, formatWholeNumber);
+  const roundedCount3 = useTransform(count3, formatWholeNumber);
 
   // Create separate refs for each element
   const { ref: refST1, inView: inView1 } = useInView({

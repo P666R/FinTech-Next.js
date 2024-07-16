@@ -8,7 +8,7 @@ function Hero() {
   // Use inView to detect when the component is in view
   const { ref: refHero, inView } = useInView({
     triggerOnce: true, // Trigger animation once
-    threshold: 0.1, // Trigger animation when 50% of the component is in view
+    threshold: 0.1,
   });
 
   // Add a class to animate when in view
@@ -28,7 +28,7 @@ function Hero() {
       <section className="hero">
         <div className="container text-center">
           {/* Hero Text  */}
-          <div className="row justify-content-center mb-5">
+          <div className="row justify-content-center mb-10">
             <div className="col-lg-9">
               <div
                 className="hero-section-text vstack gap-3 wow-hero"
@@ -42,7 +42,7 @@ function Hero() {
                   efficiently drive your business growth forward with greater
                   ease and confidence
                 </p>
-                <div className="hero-section-buttons d-flex align-items-center justify-content-center gap-3 ">
+                <div className="hero-section-buttons d-flex align-items-center justify-content-center gap-3 py-3">
                   <a href="#" className="btn btn-lg btn-primary">
                     Get Started Now
                   </a>

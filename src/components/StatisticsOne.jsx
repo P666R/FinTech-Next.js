@@ -10,8 +10,8 @@ function StatisticsOne() {
   const count2 = useMotionValue(0);
   const count3 = useMotionValue(0.0);
 
-  const formatWithOneDecimal = (value) => value.toFixed(1); // Ensures 1 decimal place
-  const formatWholeNumber = (value) => value.toFixed(0).padStart(2, '0'); // Ensures 2 digits
+  const formatWithOneDecimal = (value) => value.toFixed(1);
+  const formatWholeNumber = (value) => value.toFixed(0).padStart(2, '0');
 
   // Round the counts for display
   const roundedCount1 = useTransform(count1, formatWithOneDecimal);

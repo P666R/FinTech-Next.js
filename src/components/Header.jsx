@@ -1,5 +1,64 @@
 /* eslint-disable @next/next/no-img-element */
+'use client';
+
+import { useEffect } from 'react';
+
 function Header() {
+  useEffect(() => {
+    let hamburgerOpen = false;
+    const navbar = document.querySelector('.navigation');
+    const navbarCollapse = document.querySelector('#navbarCollapse');
+
+    const handleScroll = () => {
+      const scrolled = window.scrollY > 50;
+      if (navbar) {
+        navbar.classList.toggle('navbar-sticky', scrolled);
+        navbar.classList.toggle('py-4', !scrolled);
+        navbar.classList.toggle('navbar-opaque', !scrolled && hamburgerOpen);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    if (navbarCollapse) {
+      navbarCollapse.addEventListener('show.bs.collapse', () => {
+        hamburgerOpen = true;
+        if (window.scrollY <= 50 && navbar) {
+          navbar.classList.add('navbar-opaque');
+        }
+      });
+
+      navbarCollapse.addEventListener('hide.bs.collapse', () => {
+        hamburgerOpen = false;
+        if (window.scrollY <= 50 && navbar) {
+          navbar.classList.remove('navbar-opaque');
+        }
+      });
+    }
+
+    handleScroll();
+
+    // Cleanup event listeners on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (navbarCollapse) {
+        navbarCollapse.removeEventListener('show.bs.collapse', () => {
+          hamburgerOpen = true;
+          if (window.scrollY <= 50 && navbar) {
+            navbar.classList.add('navbar-opaque');
+          }
+        });
+
+        navbarCollapse.removeEventListener('hide.bs.collapse', () => {
+          hamburgerOpen = false;
+          if (window.scrollY <= 50 && navbar) {
+            navbar.classList.remove('navbar-opaque');
+          }
+        });
+      }
+    };
+  }, []);
+
   return (
     <nav className="navigation navbar navbar-expand-lg fixed-top navbar-light py-4">
       <div className="container">
