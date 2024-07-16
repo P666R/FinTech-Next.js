@@ -143,13 +143,31 @@ ul.simple-list {
   margin: 0;
 }
 
-.statistics-section-text h2 {
-  flex: 1;
+.odometer1 {
+  display: inline-block;
+  width: 2.5ch;
+  text-align: center;
 }
 
-.statistics-section-text p {
-  flex: 1;
+.odometer2 {
+  display: inline-block;
+  width: 2ch;
+  text-align: center;
 }
+
+.odometer3 {
+  display: inline-block;
+  width: 2.5ch;
+  text-align: center;
+}
+
+// .statistics-section-text h2 span {
+//   flex: 0 1 49%;
+// }
+
+// .statistics-section-text h2 small {
+//   flex: 0 1 49%;
+// }
 
 // Divider
 
