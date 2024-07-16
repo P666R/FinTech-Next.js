@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 function StatisticsOne() {
@@ -19,15 +19,15 @@ function StatisticsOne() {
   const roundedCount3 = useTransform(count3, formatWithOneDecimal);
 
   // Create separate refs for each element
-  const { ref: ref1, inView: inView1 } = useInView({
+  const { ref: refSO1, inView: inView1 } = useInView({
     triggerOnce: true,
     threshold: 0.5,
   });
-  const { ref: ref2, inView: inView2 } = useInView({
+  const { ref: refSO2, inView: inView2 } = useInView({
     triggerOnce: true,
     threshold: 0.5,
   });
-  const { ref: ref3, inView: inView3 } = useInView({
+  const { ref: refSO3, inView: inView3 } = useInView({
     triggerOnce: true,
     threshold: 0.5,
   });
@@ -39,7 +39,7 @@ function StatisticsOne() {
         ease: 'easeInOut',
       });
 
-      const element = document.querySelector('.wow1');
+      const element = document.querySelector('.wow-so-1');
       if (element) {
         element.classList.add('animate__animated', 'animate__fadeInUp');
       }
@@ -53,7 +53,7 @@ function StatisticsOne() {
         ease: 'easeInOut',
       });
 
-      const element = document.querySelector('.wow2');
+      const element = document.querySelector('.wow-so-2');
       if (element) {
         element.classList.add('animate__animated', 'animate__fadeInUp');
       }
@@ -67,7 +67,7 @@ function StatisticsOne() {
         ease: 'easeInOut',
       });
 
-      const element = document.querySelector('.wow3');
+      const element = document.querySelector('.wow-so-3');
       if (element) {
         element.classList.add('animate__animated', 'animate__fadeInUp');
       }
@@ -77,37 +77,41 @@ function StatisticsOne() {
   return (
     <section className="statistics py-100">
       <div className="container">
-        <div className="row justify-content-md-center row-cols-1 row-cols-md-3 g-4">
+        <div className="row justify-content-md-center row-cols-1 row-cols-md-3 g-3">
           {/* Stat 1 */}
-          <div className="col" ref={ref1}>
-            <div className="statistics-section-text d-flex flex-column flex-lg-row text-center align-items-lg-center wow1">
+          <div className="col" ref={refSO1}>
+            <div className="statistics-section-text d-flex flex-column flex-lg-row text-center align-items-lg-center wow-so-1 gap-2">
               <motion.h2 className="display-2 fw-bold flex-lg-shrink-0">
                 <motion.span className="odometer1">{roundedCount1}</motion.span>
                 <small>K</small>
               </motion.h2>
-              <p className="lead fs-5">Clients engaged worldwide with us</p>
+              <p className="lead fs-5 mb-lg-0">
+                Clients engaged worldwide with us
+              </p>
             </div>
           </div>
           {/* Stat 2 */}
-          <div className="col" ref={ref2}>
-            <div className="statistics-section-text d-flex flex-column flex-lg-row text-center align-items-lg-center wow2">
+          <div className="col" ref={refSO2}>
+            <div className="statistics-section-text d-flex flex-column flex-lg-row text-center align-items-lg-center wow-so-2 gap-2">
               <motion.h2 className="display-2 fw-bold flex-lg-shrink-0">
                 <motion.span className="odometer2">{roundedCount2}</motion.span>
                 <small>%</small>
               </motion.h2>
-              <p className="lead fs-5">
+              <p className="lead fs-5 mb-lg-0">
                 Increase in client satisfaction last year
               </p>
             </div>
           </div>
           {/* Stat 3 */}
-          <div className="col" ref={ref3}>
-            <div className="statistics-section-text d-flex flex-column flex-lg-row text-center align-items-lg-center wow3">
+          <div className="col" ref={refSO3}>
+            <div className="statistics-section-text d-flex flex-column flex-lg-row text-center align-items-lg-center wow-so-3 gap-2">
               <motion.h2 className="display-2 fw-bold flex-lg-shrink-0">
                 <motion.span className="odometer3">{roundedCount3}</motion.span>
                 <small>%</small>
               </motion.h2>
-              <p className="lead fs-5">High average ratings for our services</p>
+              <p className="lead fs-5 mb-lg-0">
+                High average ratings for our services
+              </p>
             </div>
           </div>
         </div>

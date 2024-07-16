@@ -6,7 +6,7 @@ import { useInView } from 'react-intersection-observer';
 
 function Hero() {
   // Use inView to detect when the component is in view
-  const { ref, inView } = useInView({
+  const { ref: refHero, inView } = useInView({
     triggerOnce: true, // Trigger animation once
     threshold: 0.1, // Trigger animation when 50% of the component is in view
   });
@@ -14,7 +14,7 @@ function Hero() {
   // Add a class to animate when in view
   useEffect(() => {
     if (inView) {
-      const elements = document.querySelectorAll('.wow');
+      const elements = document.querySelectorAll('.wow-hero');
 
       elements.forEach((element) => {
         element.classList.add('animate__animated', 'animate__fadeInUp');
@@ -30,7 +30,10 @@ function Hero() {
           {/* Hero Text  */}
           <div className="row justify-content-center mb-5">
             <div className="col-lg-9">
-              <div className="hero-section-text vstack gap-3 wow" ref={ref}>
+              <div
+                className="hero-section-text vstack gap-3 wow-hero"
+                ref={refHero}
+              >
                 <h2 className="display-3 fw-bold ">
                   Ultimate Analytics To Boost Your Business
                 </h2>
@@ -57,7 +60,7 @@ function Hero() {
           {/* Hero Image  */}
           <div className="row">
             <div className="col-12">
-              <div className="hero-section-img wow" ref={ref}>
+              <div className="hero-section-img wow-hero" ref={refHero}>
                 <img
                   src="images/hero-img.jpg"
                   alt="hero image"

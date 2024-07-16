@@ -138,9 +138,15 @@ ul.simple-list {
 
 // Statistics Section
 
-.statistics-section-text h2,
-.statistics-section-text p {
-  margin: 0;
+// .statistics-section-text h2,
+// .statistics-section-text p {
+//   margin: 0;
+// }
+
+.odometer {
+  display: inline-block;
+  width: 2ch;
+  text-align: center;
 }
 
 .odometer1 {
