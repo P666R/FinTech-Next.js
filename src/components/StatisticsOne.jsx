@@ -5,7 +5,6 @@ import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 function StatisticsOne() {
-  // Use motion values to manage animation
   const count1 = useMotionValue(0.0);
   const count2 = useMotionValue(0);
   const count3 = useMotionValue(0.0);
@@ -13,12 +12,10 @@ function StatisticsOne() {
   const formatWithOneDecimal = (value) => value.toFixed(1);
   const formatWholeNumber = (value) => value.toFixed(0).padStart(2, '0');
 
-  // Round the counts for display
   const roundedCount1 = useTransform(count1, formatWithOneDecimal);
   const roundedCount2 = useTransform(count2, formatWholeNumber);
   const roundedCount3 = useTransform(count3, formatWithOneDecimal);
 
-  // Create separate refs for each element
   const { ref: refSO1, inView: inView1 } = useInView({
     triggerOnce: true,
     threshold: 0.5,
@@ -33,46 +30,26 @@ function StatisticsOne() {
   });
 
   useEffect(() => {
-    if (inView1) {
-      animate(count1, 9.1, {
-        duration: 8,
-        ease: 'easeInOut',
-      });
+    const elements = [
+      { inView: inView1, count: count1, target: 9.1, selector: '.wow-so-1' },
+      { inView: inView2, count: count2, target: 92, selector: '.wow-so-2' },
+      { inView: inView3, count: count3, target: 4.5, selector: '.wow-so-3' },
+    ];
 
-      const element = document.querySelector('.wow-so-1');
-      if (element) {
-        element.classList.add('animate__animated', 'animate__fadeInUp');
+    elements.forEach(({ inView, count, target, selector }) => {
+      if (inView) {
+        animate(count, target, {
+          duration: 8,
+          ease: 'easeInOut',
+        });
+
+        const element = document.querySelector(selector);
+        if (element) {
+          element.classList.add('animate__animated', 'animate__fadeInUp');
+        }
       }
-    }
-  }, [count1, inView1]);
-
-  useEffect(() => {
-    if (inView2) {
-      animate(count2, 92, {
-        duration: 8,
-        ease: 'easeInOut',
-      });
-
-      const element = document.querySelector('.wow-so-2');
-      if (element) {
-        element.classList.add('animate__animated', 'animate__fadeInUp');
-      }
-    }
-  }, [count2, inView2]);
-
-  useEffect(() => {
-    if (inView3) {
-      animate(count3, 4.5, {
-        duration: 8,
-        ease: 'easeInOut',
-      });
-
-      const element = document.querySelector('.wow-so-3');
-      if (element) {
-        element.classList.add('animate__animated', 'animate__fadeInUp');
-      }
-    }
-  }, [count3, inView3]);
+    });
+  }, [inView1, inView2, inView3, count1, count2, count3]);
 
   return (
     <section className="statistics py-100">

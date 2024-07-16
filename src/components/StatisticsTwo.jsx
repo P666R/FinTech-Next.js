@@ -5,19 +5,16 @@ import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 function StatisticsTwo() {
-  // Use motion values to manage animation
   const count1 = useMotionValue(0);
   const count2 = useMotionValue(0);
   const count3 = useMotionValue(0);
 
   const formatWholeNumber = (value) => value.toFixed(0).padStart(2, '0');
 
-  // Format the counts for display
   const roundedCount1 = useTransform(count1, formatWholeNumber);
   const roundedCount2 = useTransform(count2, formatWholeNumber);
   const roundedCount3 = useTransform(count3, formatWholeNumber);
 
-  // Create separate refs for each element
   const { ref: refST1, inView: inView1 } = useInView({
     triggerOnce: true,
     threshold: 0.5,
@@ -32,46 +29,26 @@ function StatisticsTwo() {
   });
 
   useEffect(() => {
-    if (inView1) {
-      animate(count1, 67, {
-        duration: 8,
-        ease: 'easeInOut',
-      });
+    const elements = [
+      { inView: inView1, count: count1, target: 67, selector: '.wow-st-1' },
+      { inView: inView2, count: count2, target: 89, selector: '.wow-st-2' },
+      { inView: inView3, count: count3, target: 15, selector: '.wow-st-3' },
+    ];
 
-      const element = document.querySelector('.wow-st-1');
-      if (element) {
-        element.classList.add('animate__animated', 'animate__fadeInUp');
+    elements.forEach(({ inView, count, target, selector }) => {
+      if (inView) {
+        animate(count, target, {
+          duration: 8,
+          ease: 'easeInOut',
+        });
+
+        const element = document.querySelector(selector);
+        if (element) {
+          element.classList.add('animate__animated', 'animate__fadeInUp');
+        }
       }
-    }
-  }, [count1, inView1]);
-
-  useEffect(() => {
-    if (inView2) {
-      animate(count2, 89, {
-        duration: 8,
-        ease: 'easeInOut',
-      });
-
-      const element = document.querySelector('.wow-st-2');
-      if (element) {
-        element.classList.add('animate__animated', 'animate__fadeInUp');
-      }
-    }
-  }, [count2, inView2]);
-
-  useEffect(() => {
-    if (inView3) {
-      animate(count3, 15, {
-        duration: 8,
-        ease: 'easeInOut',
-      });
-
-      const element = document.querySelector('.wow-st-3');
-      if (element) {
-        element.classList.add('animate__animated', 'animate__fadeInUp');
-      }
-    }
-  }, [count3, inView3]);
+    });
+  }, [inView1, inView2, inView3, count1, count2, count3]);
 
   return (
     <section className="features10 pt-100 mb-5">

@@ -1,7 +1,8 @@
+import FeaturesOne from '@/components/FeaturesOne';
+import FeaturesTwo from '@/components/FeaturesTwo';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import StatisticsOne from '@/components/StatisticsOne';
-import StatisticsTwo from '@/components/StatisticsTwo';
 
 export default function HomePage() {
   return (
@@ -10,7 +11,8 @@ export default function HomePage() {
       <Hero />
       <StatisticsOne />
       <hr className="divider" />
-      <StatisticsTwo />
+      <FeaturesOne />
+      <FeaturesTwo />
     </>
   );
 }

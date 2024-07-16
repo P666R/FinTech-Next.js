@@ -28,7 +28,7 @@ function Hero() {
       <section className="hero">
         <div className="container text-center">
           {/* Hero Text  */}
-          <div className="row justify-content-center mb-10">
+          <div className="row justify-content-center mb-7 mb-sm-10">
             <div className="col-lg-9">
               <div
                 className="hero-section-text vstack gap-3 wow-hero"
@@ -37,12 +37,12 @@ function Hero() {
                 <h2 className="display-3 fw-bold ">
                   Ultimate Analytics To Boost Your Business
                 </h2>
-                <p className="lead ">
+                <p className="lead">
                   Discover advanced analytics and actionable insights to
                   efficiently drive your business growth forward with greater
                   ease and confidence
                 </p>
-                <div className="hero-section-buttons d-flex align-items-center justify-content-center gap-3 py-3">
+                <div className="hero-section-buttons d-flex align-items-stretch align-items-sm-center justify-content-center gap-3 py-3">
                   <a href="#" className="btn btn-lg btn-primary">
                     Get Started Now
                   </a>
