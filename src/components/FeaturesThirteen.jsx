@@ -40,27 +40,27 @@ function FeaturesThirteen() {
   }, [inViewText, inViewImg]);
 
   return (
-    <section class="features13 pt-100">
-      <div class="container">
-        <div class="row d-flex align-items-center bg-light p-5 gx-md-5">
+    <section className="features13 pt-100">
+      <div className="container">
+        <div className="row d-flex align-items-center bg-light p-5 gx-md-5">
           {/* Text Block  */}
-          <div class="col-md-6 order-last order-md-2">
+          <div className="col-md-6 order-last order-md-2">
             <div
-              class="features13-text-container wow-featuresThirteen-text"
+              className="features13-text-container wow-featuresThirteen-text"
               ref={refFeaturesThirteenText}
             >
-              <span class="text-uppercase fw-semibold d-inline-block mb-4">
+              <span className="text-uppercase fw-semibold d-inline-block mb-4">
                 Strategy & Consulting
               </span>
-              <h2 class="display-6 fw-bold mb-3">
+              <h2 className="display-6 fw-bold mb-3">
                 Effective Digital Marketing Results
               </h2>
-              <p class="text-muted">
+              <p className="text-muted">
                 Implementing strategies that drive measurable outcomes and
                 growth, our tailored digital marketing solutions elevate your
                 brand and engage your audience effectively.
               </p>
-              <p class="text-muted">
+              <p className="text-muted">
                 Our consulting approach focuses on understanding your unique
                 needs, crafting campaigns that resonate with your target market
                 and deliver tangible results.
@@ -68,15 +68,15 @@ function FeaturesThirteen() {
             </div>
           </div>
           {/* Image Block  */}
-          <div class="col-md-6 order-first order-md-2">
+          <div className="col-md-6 order-first order-md-2">
             <div
-              class="features13-img-container wow-featuresThirteen-img"
+              className="features13-img-container wow-featuresThirteen-img"
               ref={refFeaturesThirteenImg}
             >
               <img
                 src="images/feats-marketing.jpg"
                 alt="feats-marketing"
-                class="img-fluid mb-6 mb-md-0 custom-shadow-lg"
+                className="img-fluid mb-6 mb-md-0 custom-shadow-lg"
               />
             </div>
           </div>

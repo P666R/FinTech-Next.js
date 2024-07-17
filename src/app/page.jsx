@@ -2,6 +2,7 @@ import FeaturesEight from '@/components/FeaturesEight';
 import FeaturesEleven from '@/components/FeaturesEleven';
 import FeaturesFive from '@/components/FeaturesFive';
 import FeaturesFour from '@/components/FeaturesFour';
+import FeaturesFourteen from '@/components/FeaturesFourteen';
 import FeaturesNine from '@/components/FeaturesNine';
 import FeaturesOne from '@/components/FeaturesOne';
 import FeaturesSeven from '@/components/FeaturesSeven';
@@ -36,6 +37,7 @@ export default function HomePage() {
       <hr className="divider" />
       <FeaturesTwelve />
       <FeaturesThirteen />
+      <FeaturesFourteen />
     </>
   );
 }
