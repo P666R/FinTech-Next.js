@@ -7,12 +7,12 @@ import { useInView } from 'react-intersection-observer';
 function FeaturesThree() {
   const { ref: refFeaturesThree1, inView: inView1 } = useInView({
     triggerOnce: true,
-    threshold: 0.5,
+    threshold: 0.01,
   });
 
   const { ref: refFeaturesThree2, inView: inView2 } = useInView({
     triggerOnce: true,
-    threshold: 0.5,
+    threshold: 0.01,
   });
 
   useEffect(() => {

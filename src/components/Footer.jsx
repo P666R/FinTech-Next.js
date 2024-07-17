@@ -154,7 +154,7 @@ function Footer() {
                     className="form-control"
                     placeholder="Email Address"
                     required
-                    autocomplete="email"
+                    autoComplete="email"
                   />
                   <button className="btn btn-primary" type="button">
                     &#8594;
@@ -410,7 +410,7 @@ function Footer() {
                   className="form-control"
                   placeholder="Email Address"
                   required
-                  autocomplete="email"
+                  autoComplete="email"
                 />
                 <button className="btn btn-primary" type="button">
                   &#8594;

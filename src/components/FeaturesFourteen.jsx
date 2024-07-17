@@ -7,12 +7,12 @@ import { useInView } from 'react-intersection-observer';
 function FeaturesFourteen() {
   const { ref: refFeaturesFourteenImg, inView: inViewImg } = useInView({
     triggerOnce: true,
-    threshold: 0.5,
+    threshold: 0.01,
   });
 
   const { ref: refFeaturesFourteenText, inView: inViewText } = useInView({
     triggerOnce: true,
-    threshold: 0.5,
+    threshold: 0.01,
   });
 
   useEffect(() => {

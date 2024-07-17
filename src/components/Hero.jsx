@@ -7,8 +7,8 @@ import { useInView } from 'react-intersection-observer';
 function Hero() {
   // Use inView to detect when the component is in view
   const { ref: refHero, inView } = useInView({
-    triggerOnce: true, // Trigger animation once
-    threshold: 0.1,
+    triggerOnce: true,
+    threshold: 0.01,
   });
 
   // Add a class to animate when in view
@@ -42,14 +42,11 @@ function Hero() {
                   efficiently drive your business growth forward with greater
                   ease and confidence
                 </p>
-                <div className="hero-section-buttons d-flex align-items-stretch align-items-sm-center justify-content-center gap-3 py-3">
+                <div className="hero-section-buttons d-flex align-items-stretch align-items-sm-center justify-content-center gap-3 py-6">
                   <a href="#" className="btn btn-lg btn-primary">
                     Get Started Now
                   </a>
-                  <a
-                    href="#"
-                    className="btn btn-lg btn-outline-secondary border-2"
-                  >
+                  <a href="#" className="btn btn-lg btn-outline-dark border-2">
                     Find Out More
                   </a>
                 </div>

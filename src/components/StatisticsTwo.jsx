@@ -17,15 +17,15 @@ function StatisticsTwo() {
 
   const { ref: refST1, inView: inView1 } = useInView({
     triggerOnce: true,
-    threshold: 0.5,
+    threshold: 0.01,
   });
   const { ref: refST2, inView: inView2 } = useInView({
     triggerOnce: true,
-    threshold: 0.5,
+    threshold: 0.01,
   });
   const { ref: refST3, inView: inView3 } = useInView({
     triggerOnce: true,
-    threshold: 0.5,
+    threshold: 0.01,
   });
 
   useEffect(() => {

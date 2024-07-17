@@ -7,7 +7,7 @@ import { useInView } from 'react-intersection-observer';
 function FeaturesNine() {
   const { ref: refFeaturesNineVideo, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.5,
+    threshold: 0.01,
   });
 
   const videoBtnRef = useRef(null);

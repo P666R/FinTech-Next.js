@@ -18,15 +18,15 @@ function StatisticsOne() {
 
   const { ref: refSO1, inView: inView1 } = useInView({
     triggerOnce: true,
-    threshold: 0.5,
+    threshold: 0.01,
   });
   const { ref: refSO2, inView: inView2 } = useInView({
     triggerOnce: true,
-    threshold: 0.5,
+    threshold: 0.01,
   });
   const { ref: refSO3, inView: inView3 } = useInView({
     triggerOnce: true,
-    threshold: 0.5,
+    threshold: 0.01,
   });
 
   useEffect(() => {

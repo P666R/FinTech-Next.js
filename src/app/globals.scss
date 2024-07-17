@@ -394,7 +394,46 @@ button.accordion-button:focus {
 }
 
 @media (max-width: 991.98px) {
-  .wow {
+  .wow-hero,
+  .wow-so-1,
+  .wow-so-2,
+  .wow-so-3,
+  .wow-st-1,
+  .wow-st-2,
+  .wow-st-3,
+  .wow-featuresOne-1,
+  .wow-featuresOne-2,
+  .wow-featuresTwo-1,
+  .wow-featuresTwo-2,
+  .wow-featuresTwo-3,
+  .wow-featuresTwo-4,
+  .wow-featuresTwo-5,
+  .wow-featuresThree-1,
+  .wow-featuresThree-2,
+  .wow-featuresFour-1,
+  .wow-featuresFour-2,
+  .wow-featuresFour-3,
+  .wow-featuresFive-text,
+  .wow-featuresFive-img,
+  .wow-featuresSix-1,
+  .wow-featuresSix-2,
+  .wow-featuresSix-3,
+  .wow-featuresSix-4,
+  .wow-featuresSix-5,
+  .wow-featuresSix-6,
+  .wow-featuresSeven-img,
+  .wow-featuresSeven-text,
+  .wow-featuresEight-img,
+  .wow-featuresEight-text,
+  .wow-featuresNine-video,
+  .wow-featuresEleven-img,
+  .wow-featuresEleven-text,
+  .wow-featuresTwelve-img,
+  .wow-featuresTwelve-text,
+  .wow-featuresThirteen-img,
+  .wow-featuresThirteen-text,
+  .wow-featuresFourteen-img,
+  .wow-featuresFourteen-text {
     animation-name: none !important;
     visibility: visible !important;
   }
@@ -422,7 +461,7 @@ button.accordion-button:focus {
 
 @media (max-width: 575.98px) {
   html {
-    font-size: 87.5%; /* 1rem = 14px */
+    font-size: 87.5%;
   }
 
   .container {
@@ -440,7 +479,7 @@ button.accordion-button:focus {
 
 @media (max-width: 428px) {
   html {
-    font-size: 75%; /* 1rem = 12px */
+    font-size: 75%;
   }
 
   .logo-img {
@@ -456,7 +495,7 @@ button.accordion-button:focus {
 
 @media (max-width: 320px) {
   html {
-    font-size: 62.5%; /* 1rem = 10px */
+    font-size: 62.5%;
   }
 
   .logo-img {
