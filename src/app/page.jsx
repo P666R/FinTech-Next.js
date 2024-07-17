@@ -8,6 +8,7 @@ import FeaturesNine from '@/components/FeaturesNine';
 import FeaturesOne from '@/components/FeaturesOne';
 import FeaturesSeven from '@/components/FeaturesSeven';
 import FeaturesSix from '@/components/FeaturesSix';
+import FeaturesSixteeen from '@/components/FeaturesSixteeen';
 import FeaturesThirteen from '@/components/FeaturesThirteen';
 import FeaturesThree from '@/components/FeaturesThree';
 import FeaturesTwelve from '@/components/FeaturesTwelve';
@@ -40,6 +41,7 @@ export default function HomePage() {
       <FeaturesThirteen />
       <FeaturesFourteen />
       <FeaturesFifteen />
+      <FeaturesSixteeen />
     </>
   );
 }
