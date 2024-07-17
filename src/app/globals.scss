@@ -88,21 +88,18 @@ ul.simple-list {
   font-weight: 400;
 }
 
-// lg-25-3xl
 .custom-shadow-lg {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.25),
     0 4px 6px -4px rgba(0, 0, 0, 0.25);
   border-radius: 1.5rem;
 }
 
-// lg-20-lg
 .custom-shadow-card {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2),
     0 4px 6px -2px rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
 }
 
-// lg-25-lg
 .custom-shadow-card-sm {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.25),
     0 4px 6px -2px rgba(0, 0, 0, 0.25);
@@ -136,13 +133,6 @@ ul.simple-list {
   padding-top: 10.625rem;
 }
 
-// Statistics Section
-
-// .statistics-section-text h2,
-// .statistics-section-text p {
-//   margin: 0;
-// }
-
 .odometer {
   display: inline-block;
   width: 2ch;
@@ -166,14 +156,6 @@ ul.simple-list {
   width: 2.5ch;
   text-align: center;
 }
-
-// .statistics-section-text h2 span {
-//   flex: 0 1 49%;
-// }
-
-// .statistics-section-text h2 small {
-//   flex: 0 1 49%;
-// }
 
 // Divider
 

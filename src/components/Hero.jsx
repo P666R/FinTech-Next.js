@@ -5,13 +5,11 @@ import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 function Hero() {
-  // Use inView to detect when the component is in view
   const { ref: refHero, inView } = useInView({
     triggerOnce: true,
     threshold: 0.01,
   });
 
-  // Add a class to animate when in view
   useEffect(() => {
     if (inView) {
       const elements = document.querySelectorAll('.wow-hero');
