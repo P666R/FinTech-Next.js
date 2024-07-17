@@ -13,6 +13,7 @@ import FeaturesThirteen from '@/components/FeaturesThirteen';
 import FeaturesThree from '@/components/FeaturesThree';
 import FeaturesTwelve from '@/components/FeaturesTwelve';
 import FeaturesTwo from '@/components/FeaturesTwo';
+import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import StatisticsOne from '@/components/StatisticsOne';
@@ -42,6 +43,7 @@ export default function HomePage() {
       <FeaturesFourteen />
       <FeaturesFifteen />
       <FeaturesSixteeen />
+      <Footer />
     </>
   );
 }
