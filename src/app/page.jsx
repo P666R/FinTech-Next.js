@@ -6,7 +6,9 @@ import FeaturesNine from '@/components/FeaturesNine';
 import FeaturesOne from '@/components/FeaturesOne';
 import FeaturesSeven from '@/components/FeaturesSeven';
 import FeaturesSix from '@/components/FeaturesSix';
+import FeaturesThirteen from '@/components/FeaturesThirteen';
 import FeaturesThree from '@/components/FeaturesThree';
+import FeaturesTwelve from '@/components/FeaturesTwelve';
 import FeaturesTwo from '@/components/FeaturesTwo';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -31,6 +33,9 @@ export default function HomePage() {
       <FeaturesNine />
       <StatisticsTwo />
       <FeaturesEleven />
+      <hr className="divider" />
+      <FeaturesTwelve />
+      <FeaturesThirteen />
     </>
   );
 }
