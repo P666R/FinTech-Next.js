@@ -252,7 +252,7 @@ ul.simple-list {
 
 .accordion-button:not(.collapsed) {
   background-color: transparent !important;
-  color: inherit;
+  color: inherit !important;
 }
 
 button.accordion-button:focus {
