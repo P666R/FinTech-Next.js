@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FinTech Website
 
-## Getting Started
+Next.js website for a financial advisor startup. This website has a light, business-like design.
 
-First, run the development server:
+<img src="./public/images/desktop-screenshot.png"  />
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
+
+- Modern layout with custom animations/styles/backgrounds
+- Responsive design
+- Sticky navbar with style changes on scroll
+- custom animations with framer-motion
+- Bootstrap modals
+- Testimonials with react-slick carousel slider
+- Many other features
+
+## Usage
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and [Bootstrap](https://getbootstrap.com/).
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+In order to customize this website, clone this repository and run:
 
-## Learn More
+```bash
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+This will install the dependencies.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To start the development server, run:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+npm run dev
+```
 
-## Deploy on Vercel
+To build the project, run:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+You can add Bootstrap variables to the `styles/bootstrap.scss` file. You can look at the file `node_modules/bootstrap/dist/scss/_variables.scss` for a list of all the variables. Do NOT edit the `variables.scss` file directly, as it will be overwritten when you update Bootstrap.
+
+To add your own custom styles, use the `globals.scss` file.

@@ -18,7 +18,7 @@ function FeaturesSixteeen() {
               <p className="text-muted fs-4 fw-semibold mb-4">
                 Start your free 7-day trial. No credit card required
               </p>
-              <div className="banner-section-buttons d-flex align-items-center justify-content-sm-start gap-3">
+              <div className="banner-section-buttons d-flex align-align-items-stretch align-items-sm-center justify-content-sm-start gap-3">
                 <a href="#" className="btn btn-lg btn-primary">
                   Get Started
                 </a>

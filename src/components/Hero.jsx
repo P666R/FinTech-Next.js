@@ -26,7 +26,7 @@ function Hero() {
       <section className="hero">
         <div className="container text-center">
           {/* Hero Text  */}
-          <div className="row justify-content-center mb-7 mb-sm-10">
+          <div className="row justify-content-center mb-5">
             <div className="col-lg-9">
               <div
                 className="hero-section-text vstack gap-3 wow-hero"
@@ -40,11 +40,14 @@ function Hero() {
                   efficiently drive your business growth forward with greater
                   ease and confidence
                 </p>
-                <div className="hero-section-buttons d-flex align-items-stretch align-items-sm-center justify-content-center gap-3 py-6">
-                  <a href="#" className="btn btn-lg btn-primary">
+                <div className="hero-section-buttons d-flex align-items-stretch align-items-sm-center justify-content-center gap-3 mt-4 mb-6">
+                  <a href="#" className="btn btn-lg btn-primary px-4 py-3">
                     Get Started Now
                   </a>
-                  <a href="#" className="btn btn-lg btn-outline-dark border-2">
+                  <a
+                    href="#"
+                    className="btn btn-lg btn-outline-dark border-2 px-4 py-3"
+                  >
                     Find Out More
                   </a>
                 </div>
