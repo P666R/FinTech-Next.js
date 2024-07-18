@@ -11,7 +11,7 @@ Next.js website for a financial advisor startup. This website has a light, busin
 - Sticky navbar with style changes on scroll
 - custom animations with framer-motion
 - Bootstrap modals
-- Testimonials with react-slick carousel slider
+- Testimonials with carousel slider
 - Many other features
 
 ## Usage
@@ -42,6 +42,6 @@ To build the project, run:
 npm run build
 ```
 
-You can add Bootstrap variables to the `styles/bootstrap.scss` file. You can look at the file `node_modules/bootstrap/dist/scss/_variables.scss` for a list of all the variables. Do NOT edit the `variables.scss` file directly, as it will be overwritten when you update Bootstrap.
+You can add Bootstrap variables to the `styles/bootstrap.scss` file. You can look at the file `node_modules/bootstrap/dist/scss/_variables.scss` for a list of all the variables.
 
 To add your own custom styles, use the `globals.scss` file.
