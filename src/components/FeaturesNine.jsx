@@ -13,7 +13,7 @@ function FeaturesNine() {
   const videoBtnRef = useRef(null);
   const videoModalRef = useRef(null);
   const videoRef = useRef(null);
-  let videoSrc = '';
+  const videoSrcRef = useRef('');
 
   useEffect(() => {
     if (inView) {
@@ -31,7 +31,7 @@ function FeaturesNine() {
 
     if (videoBtn !== null) {
       videoBtn.addEventListener('click', () => {
-        videoSrc = videoBtn.getAttribute('data-bs-src');
+        videoSrcRef.current = videoBtn.getAttribute('data-bs-src');
       });
     }
 
@@ -39,7 +39,7 @@ function FeaturesNine() {
       if (video) {
         video.setAttribute(
           'src',
-          videoSrc + '?autoplay=1&modestbranding=1&showInfo=0'
+          videoSrcRef.current + '?autoplay=1&modestbranding=1&showInfo=0'
         );
       }
     };
@@ -66,7 +66,7 @@ function FeaturesNine() {
   return (
     <section className="features9 pt-100">
       <div className="container">
-        {/* Title  */}
+        {/* Title */}
         <div className="row justify-content-center mb-5">
           <div className="col-md-10 col-lg-9">
             <div className="features9-text-container text-center">
@@ -78,7 +78,7 @@ function FeaturesNine() {
             </div>
           </div>
         </div>
-        {/* Video  */}
+        {/* Video */}
         <div className="row">
           <div className="col">
             <div
@@ -106,7 +106,7 @@ function FeaturesNine() {
         </div>
       </div>
 
-      {/* Video Modal  */}
+      {/* Video Modal */}
       <div className="video-modal">
         <div id="videoModal" className="modal fade" ref={videoModalRef}>
           <div className="modal-dialog">

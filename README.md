@@ -2,7 +2,7 @@
 
 Next.js website for a financial advisor startup. This website has a light, business-like design.
 
-<img src="./public/images/desktop-screenshot.png"  />
+<img src="./desktop-screenshot.png"  />
 
 ## Features
 
